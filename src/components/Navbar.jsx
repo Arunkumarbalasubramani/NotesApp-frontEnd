@@ -6,9 +6,10 @@ import Toolbar from "@mui/material/Toolbar";
 import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
 import InputBase from "@mui/material/InputBase";
-import MenuIcon from "@mui/icons-material/Menu";
-import SearchIcon from "@mui/icons-material/Search";
 
+import SearchIcon from "@mui/icons-material/Search";
+import { AccountCircle } from "@mui/icons-material";
+import NightsStayIcon from "@mui/icons-material/NightsStay";
 const Navigationbar = () => {
   const Search = styled("div")(({ theme }) => ({
     position: "relative",
@@ -54,26 +55,36 @@ const Navigationbar = () => {
 
   return (
     <>
-      <Box sx={{ flexGrow: 1 }}>
+      <Box sx={{ flexGrow: 3 }}>
         <AppBar position="static">
           <Toolbar>
-            <Typography
-              variant="h6"
-              noWrap
-              component="div"
-              sx={{ flexGrow: 1, display: { sm: "inline-block" } }}
-            >
-              NOTOSPHERE
-            </Typography>
-            <Search>
-              <SearchIconWrapper>
-                <SearchIcon />
-              </SearchIconWrapper>
-              <StyledInputBase
-                placeholder="Search…"
-                inputProps={{ "aria-label": "search" }}
-              />
-            </Search>
+            <div className="nav-items">
+              <Typography
+                variant="h6"
+                noWrap
+                component="div"
+                sx={{ flexGrow: 1, display: { xs: "flex", sm: "block" } }}
+              >
+                NOTOSPHERE
+              </Typography>
+              <div className=" extras">
+                <Search>
+                  <SearchIconWrapper>
+                    <SearchIcon />
+                  </SearchIconWrapper>
+                  <StyledInputBase
+                    placeholder="Search…"
+                    inputProps={{ "aria-label": "search" }}
+                  />
+                </Search>
+                <IconButton>
+                  <AccountCircle sx={{ fontSize: 40 }} />
+                </IconButton>
+                <IconButton size="large">
+                  <NightsStayIcon sx={{ fontSize: 40 }} />
+                </IconButton>
+              </div>
+            </div>
           </Toolbar>
         </AppBar>
       </Box>
