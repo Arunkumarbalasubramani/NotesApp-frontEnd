@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Satisfy&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ephesis&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Prompt:ital@1&display=swap");
 
 * {
   margin: 0;
@@ -33,13 +35,16 @@
   flex-direction: column;
 }
 .nav-container {
-  height: 20%;
   width: 100%;
+  padding: 1%;
   background-color: #e6787a;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  @media screen and (max-width: 630px) {
+  position: fixed;
+
+  @media screen and (max-width: 856px) {
+    position: sticky;
     flex-direction: column;
   }
 }
@@ -58,4 +63,30 @@
   @media screen and (max-width: 630px) {
     padding: 0 3% 3% 3%;
   }
+}
+
+.homepage-container {
+  width: 100%;
+  height: 100vh;
+  background-color: #ffcfd5;
+  padding: 8% 5% 5% 5%;
+}
+.heading {
+  font-family: "Satisfy", cursive;
+  text-align: center;
+}
+.home-content {
+  padding: 4%;
+  font-size: 24px;
+  @media screen and (max-width: 630px) {
+    font-size: 15px;
+  }
+}
+.home-container {
+  font-family: "Prompt", sans-serif;
+}
+.subhead {
+  font-family: "Ephesis", cursive;
+  font-size: 26px;
+  font-weight: 600;
 }
