@@ -8,6 +8,7 @@ import SignUp from "./components/SignUp";
 import NotesPage from "./components/Notes";
 import EditPage from "./components/EditPage";
 import ViewNote from "./components/ViewNote";
+import AddNote from "./components/AddNote";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path="/notes" element={<NotesPage />} />
         <Route path="/editpage" element={<EditPage />} />
         <Route path="/viewnote" element={<ViewNote />} />
+        <Route path="/addnote" element={<AddNote />} />
       </Routes>
     </>
   );

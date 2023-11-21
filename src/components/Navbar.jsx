@@ -8,7 +8,8 @@ import DarkModeIcon from "@mui/icons-material/DarkMode";
 import SearchIcon from "@mui/icons-material/Search";
 import InputBase from "@mui/material/InputBase";
 
-import NoteAddIcon from "@mui/icons-material/NoteAdd";
+import Button from "@mui/material/Button";
+import Link from "@mui/material/Link";
 const Navigationbar = () => {
   const [theme, setTheme] = useState("dark");
 
@@ -73,11 +74,11 @@ const Navigationbar = () => {
               />
             </Search>
           </div>
-          <Tooltip title="Add Note">
-            <IconButton>
-              <NoteAddIcon sx={{ fontSize: 40 }} />
-            </IconButton>
-          </Tooltip>
+          <Link href="/notes" color="inherit">
+            <Button variant="contained" style={{ backgroundColor: "#cb0120" }}>
+              All Notes
+            </Button>
+          </Link>
 
           <Tooltip title="Logout">
             <IconButton>
