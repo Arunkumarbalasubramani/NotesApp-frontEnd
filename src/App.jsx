@@ -1,17 +1,25 @@
 import "./App.scss";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Navigationbar from "./components/Navbar";
+
 import { Route, Routes } from "react-router-dom";
 import HomePage from "./components/HomePage";
-import Footer from "./components/Footer";
+import Signin from "./components/Signin";
+import SignUp from "./components/SignUp";
+import NotesPage from "./components/Notes";
+import EditPage from "./components/EditPage";
+import ViewNote from "./components/ViewNote";
+
 function App() {
   return (
     <>
-      <Navigationbar />
       <Routes>
-        <Route path="/" element={<HomePage />} />
+        <Route path="/" element={<Signin />} />
+        <Route path="/signUp" element={<SignUp />} />
+        <Route path="/homepage" element={<HomePage />} />
+        <Route path="/notes" element={<NotesPage />} />
+        <Route path="/editpage" element={<EditPage />} />
+        <Route path="/viewnote" element={<ViewNote />} />
       </Routes>
-      <Footer />
     </>
   );
 }
