@@ -61,7 +61,10 @@ const Navigationbar = () => {
   return (
     <>
       <div className="nav-container">
-        <h1 className="logo">NotoSphere</h1>
+        <Link href="/homepage" color="inherit">
+          <h1 className="logo">NotoSphere</h1>
+        </Link>
+
         <div className="additonal-actions">
           <div>
             <Search>
