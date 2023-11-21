@@ -7,6 +7,8 @@ import LightModeIcon from "@mui/icons-material/LightMode";
 import DarkModeIcon from "@mui/icons-material/DarkMode";
 import SearchIcon from "@mui/icons-material/Search";
 import InputBase from "@mui/material/InputBase";
+
+import NoteAddIcon from "@mui/icons-material/NoteAdd";
 const Navigationbar = () => {
   const [theme, setTheme] = useState("dark");
 
@@ -71,6 +73,12 @@ const Navigationbar = () => {
               />
             </Search>
           </div>
+          <Tooltip title="Add Note">
+            <IconButton>
+              <NoteAddIcon sx={{ fontSize: 40 }} />
+            </IconButton>
+          </Tooltip>
+
           <Tooltip title="Logout">
             <IconButton>
               <AccountCircle sx={{ fontSize: 40 }} />
